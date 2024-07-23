@@ -27,7 +27,7 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-
+        //return "Ya estamos dentro del login.";
     }
 
     public function logout(Request $request)
