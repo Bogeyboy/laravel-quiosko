@@ -35,4 +35,17 @@ class RegistroRequest extends FormRequest
             ]
         ];
     }
+
+    /* Función para los mensaje de validación personalizados */
+    public function messages()
+    {
+        return [
+            'name' => 'El nombre del usuario es obligatorio',
+            'email.required' => 'El email es obligatorio',
+            'email.email' => 'El email debe ser válido',
+            'email.unique' => 'El usuario con ese email ya se encuentra registrado',
+            'password.required' => 'El password es obligatorio',
+            //'password' => 'El password debe contener al menos 8 caracteres, un símbolo y un número.'
+        ];
+    }
 }
