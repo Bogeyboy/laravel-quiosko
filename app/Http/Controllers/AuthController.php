@@ -30,7 +30,6 @@ class AuthController extends Controller
     }
     public function login(LoginRequest $request)
     {
-        //return "Ya estamos dentro del login.";
         $data = $request->validated();
         //Revisamos si el password es válido
         if(!Auth::attempt($data)){
