@@ -16,7 +16,7 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //
+        return "Todo va de forma correcta, por el momento";
     }
 
     /**
