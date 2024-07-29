@@ -49,7 +49,7 @@ class PedidoController extends Controller
         //Almacenar en la BD
         PedidoProducto::insert($pedido_producto);
         return [
-            'message' => 'Realizando pedido '
+            'message' => 'Pedido realizado correctamente.'
         ];
     }
 
