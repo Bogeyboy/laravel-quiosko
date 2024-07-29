@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PedidoCollection;
 use App\Models\PedidoProducto;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        return "Todo va de forma correcta, por el momento";
+        return new PedidoCollection(Pedido::with('user')->where('estado',0)->get());
     }
 
     /**
